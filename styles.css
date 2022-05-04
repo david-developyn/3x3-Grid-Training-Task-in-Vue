@@ -1,0 +1,145 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+form {
+	text-align: center;
+}
+
+img[src*="Magic 8-ball"] {
+	position: absolute;
+	top: 2rem;
+	height: calc(33vmin - 2rem);
+}
+
+main {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	height: 100vh;
+	overflow: hidden;
+}
+
+main > * {
+	margin: auto 0;
+}
+
+table, th, td {
+	border: 0.1rem solid black;
+	text-align: center;
+}
+
+table button {
+	border: none;
+}
+
+.center_form * {
+	display: block;
+	margin: auto;
+	width: fit-content;
+}
+
+.game_section > input {
+	display: block;
+	margin: auto;
+}
+
+.game_section > button {
+	display: block;
+	margin-left: auto;
+}
+
+.game_section > div > div {
+	align-items: center;
+	display: flex;
+}
+
+.game_section > div > div > img {
+	height: 4rem;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+	width: fit-content;
+}
+
+.list {
+	overflow-y: scroll;
+	height: calc(33vh - 1rem);
+}
+
+.login_successful {
+	background-color: green;
+	color: white;
+}
+
+.magic_8ball {
+	display: flex;
+    justify-content: center;
+	margin: 0;
+	position: relative;
+}
+
+.quiz_answer {
+	display: inline-block;
+	margin: 0 1rem;
+	margin-bottom: 0.5rem;
+}
+
+.shake_magic_8ball_front {
+	animation:
+		shake_animation 250ms 25,
+		fade 5s both;
+}
+
+.shake_magic_8ball_back {
+	animation: shake_animation 250ms 25;
+}
+
+.shake_magic_8ball_answer {
+	animation:
+		shake_animation 250ms 25,
+		fade 5s both reverse;
+}
+
+.time {
+	margin: auto;
+}
+
+#magic_8ball_answer {
+	color: white;
+	display: flex;
+	font-size: 0.9rem;
+    justify-content: center;
+	position: absolute;
+	text-align: center;
+	top: 10rem;
+	width: 5rem;
+}
+
+@keyframes shake_animation {
+	0% {
+		transform: translate(0);
+	}
+	25% {
+		transform: translate(-10rem);
+	}
+	75% {
+		transform: translate(10rem);
+	}
+	100% {
+		transform: translate(0);
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: 100%;
+	}
+	to {
+		opacity: 0;
+	}
+}
